@@ -1,10 +1,8 @@
 
 #-Oracle's JDK
 
-yum install centos-release-scl.noarch
-yum groupinstall "Development Tools" # yum groupinstall development
-
-#AND
+#yum install centos-release-scl.noarch
+#yum groupinstall "Development Tools" # yum groupinstall development
 
 yum install -y ant
 yum install -y asciidoc
