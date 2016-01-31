@@ -35,9 +35,12 @@ USER_DOMAIN_PREFIX='< userDomainPrefix >'
 #applications recognize the new settings.
 
 #SUCCESS
+
+/opt/pbis/bin/update-dns
+
 #reboot
 #Set this value again if rebooted
-USER_DOMAIN_PREFIX='< userDomainPrefix >'
+#USER_DOMAIN_PREFIX='< userDomainPrefix >'
 
 ### TBD
 #/opt/pbis/bin/config AssumeDefaultDomain true
