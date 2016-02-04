@@ -36,7 +36,7 @@ USER_DOMAIN_PREFIX='< userDomainPrefix >'
 
 #SUCCESS
 
-/opt/pbis/bin/update-dns
+cp /opt/pbis/bin/update-dns /etc/cron.d/.
 
 #reboot
 #Set this value again if rebooted
@@ -45,6 +45,5 @@ USER_DOMAIN_PREFIX='< userDomainPrefix >'
 ### TBD
 #/opt/pbis/bin/config AssumeDefaultDomain true
 #/opt/pbis/bin/config UserDomainPrefix $USER_DOMAIN_PREFIX
-
 #/opt/pbis/bin/config LoginShellTemplate /bin/bash
 
