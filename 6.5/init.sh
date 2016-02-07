@@ -4,6 +4,25 @@
 
 cat /etc/centos-release 
 yum install ntp -y
+chkconfig ntpd on
+
+#
+# Disable SELinux
+#
+
+getenforce # if returning "disabled" or "permissive" then no need to setenforce 0
+# cat /etc/sysconfig/selinux |grep SELINUX=
+
+setenforce 0
+# getenforce
+# cat /etc/sysconfig/selinux |grep SELINUX=
+
+#
+# Disalbe iptables if needed
+#
+#chkconfig iptables off
+#service iptables stop
+ 
 
 #
 # Install pbis
