@@ -28,11 +28,11 @@ rm /usr/lib/maven
 ln -s /usr/lib/apache-maven-3.0.5 /usr/lib/maven
 mvn --version
 
-OR
-wget http://repos.fedorapeople.org/repos/dchen/apache-maven/epel-apache-maven.repo -O /etc/yum.repos.d/epel-apache-maven.repo
-yum install apache-maven
-ls /usr/share/apache-maven
-ln -s /usr/share/apache-maven /usr/lib/maven
+#OR
+#wget http://repos.fedorapeople.org/repos/dchen/apache-maven/epel-apache-maven.repo -O /etc/yum.repos.d/epel-apache-maven.repo
+#yum install apache-maven
+#ls /usr/share/apache-maven
+#ln -s /usr/share/apache-maven /usr/lib/maven
 
 echo '#!/bin/bash
 MAVEN_HOME=/usr/lib/maven
