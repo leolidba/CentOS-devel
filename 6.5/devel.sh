@@ -32,5 +32,5 @@ PATH=$MAVEN_HOME/bin:$PATH
 export PATH MAVEN_HOME
 export CLASSPATH=.' > /etc/profile.d/maven.sh
 
-source mvn.sh
+source /etc/profile.d/maven.sh
 
