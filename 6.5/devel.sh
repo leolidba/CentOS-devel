@@ -18,5 +18,19 @@ export PATH JAVA_HOME
 export CLASSPATH=.
 ' > /etc/profile.d/java.sh 
 
+source /etc/profile.d/java.sh 
 
 -- Install MVN
+wget http://mirror.symnds.com/software/Apache/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz
+tar zxvf apache-maven-3.3.9-bin.tar.gz
+mv apache-maven-3.3.9 /usr/lib/
+ln -s /usr/lib/apache-maven-3.3.9 /usr/lib/maven
+
+echo '#!/bin/bash
+MAVEN_HOME=/usr/lib/maven
+PATH=$MAVEN_HOME/bin:$PATH
+export PATH MAVEN_HOME
+export CLASSPATH=.' > /etc/profile.d/maven.sh
+
+source mvn.sh
+
