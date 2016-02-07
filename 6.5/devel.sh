@@ -20,11 +20,19 @@ export CLASSPATH=.
 
 source /etc/profile.d/java.sh 
 
--- Install MVN
-wget http://mirror.symnds.com/software/Apache/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz
-tar zxvf apache-maven-3.3.9-bin.tar.gz
-mv apache-maven-3.3.9 /usr/lib/
-ln -s /usr/lib/apache-maven-3.3.9 /usr/lib/maven
+-- Install MVN 3.0.5
+wget http://archive.apache.org/dist/maven/maven-3/3.0.5/binaries/apache-maven-3.0.5-bin.tar.gz
+tar zxvf apache-maven-3.0.5-bin.tar.gz
+mv apache-maven-3.0.5 /usr/lib/
+rm /usr/lib/maven
+ln -s /usr/lib/apache-maven-3.0.5 /usr/lib/maven
+mvn --version
+
+OR
+wget http://repos.fedorapeople.org/repos/dchen/apache-maven/epel-apache-maven.repo -O /etc/yum.repos.d/epel-apache-maven.repo
+yum install apache-maven
+ls /usr/share/apache-maven
+ln -s /usr/share/apache-maven /usr/lib/maven
 
 echo '#!/bin/bash
 MAVEN_HOME=/usr/lib/maven
@@ -33,4 +41,8 @@ export PATH MAVEN_HOME
 export CLASSPATH=.' > /etc/profile.d/maven.sh
 
 source /etc/profile.d/maven.sh
+
+
+
+
 
