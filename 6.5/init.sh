@@ -19,7 +19,8 @@ getenforce # if returning "disabled" or "permissive" then no need to setenforce 
 
 # Or disable permanently
 # vi /etc/sysconfig/selinux 
-sed -e 's/SELINUX=enforcing/SELINUX=disabled/' /etc/selinux/config > tmp___ && mv tmp___ /etc/selinux/config
+#sed -e 's/SELINUX=enforcing/SELINUX=disabled/' /etc/selinux/config > tmp___ && mv tmp___ /etc/selinux/config
+sed -i 's/SELINUX=enforcing/SELINUX=disabled/' /etc/selinux/config 
 
 #
 # Disalbe iptables if needed
