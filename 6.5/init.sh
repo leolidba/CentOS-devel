@@ -13,9 +13,13 @@ chkconfig ntpd on
 getenforce # if returning "disabled" or "permissive" then no need to setenforce 0
 # cat /etc/sysconfig/selinux |grep SELINUX=
 
-setenforce 0
+# Temporarily disable
+# setenforce 0
 # getenforce
-# cat /etc/sysconfig/selinux |grep SELINUX=
+
+# Or disable permanently
+# vi /etc/sysconfig/selinux 
+sed -e 's/SELINUX=enforcing/SELINUX=disabled/' /etc/selinux/config > tmp___ && mv tmp___ /etc/selinux/config
 
 #
 # Disalbe iptables if needed
