@@ -44,5 +44,5 @@ source /etc/profile.d/maven.sh
 
 
 
-
+yum install rpm-build
 
