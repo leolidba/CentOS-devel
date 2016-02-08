@@ -29,11 +29,13 @@ npm install -g brunch@1.7.20
 export _JAVA_OPTIONS="-Xmx2048m -XX:MaxPermSize=512m -Djava.awt.headless=true"
 
 #
+# Build Ambari
+#
 git clone https://git-wip-us.apache.org/repos/asf/ambari.git
 pushd ambari
 #mvn clean test
 #mvn clean install
-AMBARI_VERSION=2.2.1.0
+AMBARI_VERSION=2.0.0.0-SNAPSHOT
 mvn versions:set -DnewVersion=${AMBARI_VERSION}
 pushd ambari-metrics
 mvn versions:set -DnewVersion=${AMBARI_VERSION}
