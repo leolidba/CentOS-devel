@@ -18,6 +18,8 @@ export CLASSPATH=.
 
 source /etc/profile.d/node.sh
 
+npm install -g brunch@1.7.20
+
 
 wget http://www.apache.org/dist/ambari/ambari-2.2.0/apache-ambari-2.2.0-src.tar.gz
 tar xfvz apache-ambari-2.2.0-src.tar.gz
