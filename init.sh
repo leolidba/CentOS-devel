@@ -24,5 +24,6 @@ yum install -y sqlite-devel
 yum install -y openssl-devel #(for version 7+)
 yum install -y gmp-devel
 
+yum info epel-release
 # install -y python-simplejson python-setuptools
 
