@@ -33,3 +33,6 @@ echo browse via http://`hostname`:8080
 
 # /var/lib/ambari-server
 # /var/lib/ambari-agent/tmp
+
+#  /var/log/ambari-agent/ambari-agent.log
+#  /var/log/ambari-server/ambari-server.out 
