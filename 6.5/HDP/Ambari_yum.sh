@@ -21,3 +21,15 @@ ambari-server start
 echo browse via http://`hostname`:8080
 
 
+# /etc/ambari-server/conf/ambari.properties
+# /etc/ambari-server/conf
+# /etc/ambari-agent/conf/ambari-agent.ini
+# /etc/ambari-server/conf/password.dat
+# /usr/lib/python2.6/site-packages/ambari_server/bootstrap.py
+
+
+# /etc/ambari-agent/conf
+# /etc/ambari-agent/conf/ambari-agent.ini
+
+# /var/lib/ambari-server
+# /var/lib/ambari-agent/tmp
