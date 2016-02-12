@@ -23,6 +23,11 @@ ambari-server setup -j /etc/alternatives/java_sdk_1.8.0 # the sdk to be used. Ma
 # yum install java-1.8.0-openjdk-devel.x86_64 -y # # yum install java-1.8.0-openjdk.x86_64
 # Note the update on /etc/ambari-server/conf/ambari.properties
 
+#
+# Disable Transparent Huge Pages (THP) if enabled
+#
+echo 'never' > /sys/kernel/mm/redhat_transparent_hugepage/defrag
+# To make it permanent, add the line above to /etc/rc.local
 
 ambari-server start
 echo browse via http://`hostname`:8080
