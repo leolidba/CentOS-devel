@@ -37,3 +37,6 @@ echo browse via http://`hostname`:8080
 
 #  /var/log/ambari-agent/ambari-agent.log
 #  /var/log/ambari-server/ambari-server.out 
+
+# run dir on ambari-server
+# /var/run/ambari-server/bootstrap/
