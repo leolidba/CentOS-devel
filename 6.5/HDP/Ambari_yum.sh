@@ -19,13 +19,22 @@ ambari-server setup --jdbc-db=mysql --jdbc-driver=/usr/share/java/mysql-connecto
 # File copied to /var/lib/ambari-server/resources
 
 # Use an alternative new jdk
-ambari-server setup -j /etc/alternatives/java_sdk_1.8.0 # the sdk to be used
+ambari-server setup -j /etc/alternatives/java_sdk_1.8.0 # the sdk to be used. Make sure all hosts have the same installed
+# yum install java-1.8.0-openjdk.x86_64
 # Note the update on /etc/ambari-server/conf/ambari.properties
 
 
 ambari-server start
 echo browse via http://`hostname`:8080
 
+#
+# clean up if needed
+#
+# python /usr/lib/python2.6/site-packages/ambari_agent/HostCleanup.py --silent --skip=users
+
+#
+# Folder info
+#
 
 # /etc/ambari-server/conf/ambari.properties
 # /etc/ambari-server/conf
