@@ -16,6 +16,7 @@ ambari-server setup
 
 # choose mysql
 ambari-server setup --jdbc-db=mysql --jdbc-driver=/usr/share/java/mysql-connector-java.jar
+# File copied to /var/lib/ambari-server/resources
 
 ambari-server start
 echo browse via http://`hostname`:8080
