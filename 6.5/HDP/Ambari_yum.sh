@@ -19,7 +19,8 @@ ambari-server setup --jdbc-db=mysql --jdbc-driver=/usr/share/java/mysql-connecto
 # File copied to /var/lib/ambari-server/resources
 
 # Use an alternative new jdk
-ambari-server setup -j /etc/alternatives/java_sdk_1.8.0
+ambari-server setup -j /etc/alternatives/java_sdk_1.8.0 # the sdk to be used
+# Note the update on /etc/ambari-server/conf/ambari.properties
 
 
 ambari-server start
