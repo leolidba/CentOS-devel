@@ -26,8 +26,11 @@ ambari-server setup -j /etc/alternatives/java_sdk_1.8.0 # the sdk to be used. Ma
 #
 # Disable Transparent Huge Pages (THP) if enabled
 #
-echo 'never' > /sys/kernel/mm/redhat_transparent_hugepage/defrag
-# To make it permanent, add the line above to /etc/rc.local
+echo never > /sys/kernel/mm/redhat_transparent_hugepage/defrag
+echo never > /sys/kernel/mm/redhat_transparent_hugepage/enabled
+echo never > /sys/kernel/mm/transparent_hugepage/enabled
+echo never > /sys/kernel/mm/transparent_hugepage/defrag
+# To make it permanent, add the lines above to /etc/rc.local
 
 ambari-server start
 echo browse via http://`hostname`:8080
